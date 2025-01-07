@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn URL validation</title>
+</head>
+<body>
+    <script>
+        const validateLinkedInURL = (url) => {
+            const regex = /^https:\/\/www\.linkedin\.com\/in\/[a-zA-Z0-9_-]{5,30}$/;
+            if (regex.test(url)) {
+              console.log("Valid LinkedIn Profile URL:", url);
+            } else {
+              console.log("Invalid LinkedIn Profile URL:", url);
+            }
+          };
+          validateLinkedInURL("https://www.linkedin.com/in/john_doe123");
+          validateLinkedInURL("https://www.linkedin.com/in/abc");
+          validateLinkedInURL("https://www.linkedin.com/in/this-is-too-long-for-a-profile-url");
+          
+    </script>
+</body>
+</html>

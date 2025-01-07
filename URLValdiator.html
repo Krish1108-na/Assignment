@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Validation</title>
+</head>
+<body>
+    
+    <script>
+        const validateURL = (url) => {
+            const regex = /^(https?:\/\/)[\w\-]+(\.[\w\-]+)+$/;
+            if (regex.test(url)) {
+              console.log("Valid URL:", url);
+            } else {
+              console.log("Invalid URL:", url);
+            }
+          };
+          validateURL("http://example.com");
+          validateURL("https://sub.domain.com");
+          validateURL("ftp://invalid.url");
+          
+    </script>
+
+</body>
+</html>
